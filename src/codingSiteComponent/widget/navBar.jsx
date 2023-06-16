@@ -2,6 +2,7 @@ import { faBars, faSun, faMoon, faClose } from '@fortawesome/free-solid-svg-icon
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import themeStore from '../controller/useThemeChange';
+import logo from "/assets/images/logo.png"
 
 const Navbar = () => {
   const [showNav, setShowNav] = useState(true);
@@ -43,7 +44,7 @@ const Navbar = () => {
 
   return (
     <div className={` max-sm:w-screen fixed z-50 w-full h-16 px-4 md:px-8 lg:px-16 flex items-center  transition duration-500 ${showNav ? '' : '-translate-y-full'} ${theme === 'dark' ? 'bg-slate-700 shadow-lg  ' : 'bg-custom-blue'}`}>
-      <img src="./assets/images/logo.png" alt="site logo" className="h-16" />
+      <img src={logo} alt="site logo" className="h-16" />
 
       {showDropdown ? (
         <nav className={`dropdown absolute top-16 left-0 w-full flex flex-col items-center ${theme === 'dark' ? 'bg-gray-800' : 'bg-custom-blue'}`}>

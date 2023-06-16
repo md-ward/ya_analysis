@@ -10,6 +10,7 @@ import React, { useRef, useState } from 'react';
 import { Slide } from "react-awesome-reveal";
 import themeStore from '../controller/useThemeChange';
 
+import logo from "/assets/images/logo.png"
 
 
 const Footer = () => {
@@ -48,7 +49,7 @@ const Footer = () => {
   return (
     <footer className={`h-auto  ${theme === 'light' ? 'bg-custom-blue' : 'bg-gray-700'} grid grid-cols-2`}>
       <div className=" max-sm:col-span-2 flex sm:flex-col   justify-evenly sm:justify-center items-center py-8">
-        <img src="assets/images/logo.png" alt="YA site icon" className="h-12" />
+        <img src={logo} alt="YA site icon" className="h-12" />
         <ol className="mt-4 max-sm:grid grid-cols-2 grid-rows-2">
           {links.map((item) => (
             <li key={item.title} className="mb-2">
